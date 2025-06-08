@@ -62,6 +62,19 @@ const navigate = useNavigate();
 
   };
 
+
+  const handleSubmitWithGoogle = async (e) => {
+     
+        try {
+          window.location.href = "http://localhost:5000/api/auth/google";
+        } catch (error) {
+          console.log(error);
+        }
+  
+  
+     
+    };
+
   return (
     <>
       <section>
@@ -108,6 +121,11 @@ const navigate = useNavigate();
                   <button type="submit" className="btn btn-submit">
                     Register Now
                   </button>
+                  <br />
+                  <button  onClick={handleSubmitWithGoogle} type="submit" className="btn btn-submit">
+                    Sign Up With Google
+                  </button>
+
                 </form>
               </div>
             </div>

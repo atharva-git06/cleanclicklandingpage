@@ -1,25 +1,28 @@
-// src/pages/OAuthSuccess.jsx
-import { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useAuth } from "../store/auth";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../store/auth';
 
-export function OAuthSuccess() {
-  const { storeTokenInLS } = useAuth();
+export const OAuthSuccess = () => {
   const navigate = useNavigate();
-  const { search } = useLocation(); // e.g. "?token=eyJhbGciO..."
+  const { storeTokenInLS } = useAuth();
 
   useEffect(() => {
-    const params = new URLSearchParams(search);
-    const token = params.get("token");
-    if (token) {
-      storeTokenInLS(token);
-      // now navigate wherever you want (home page, dashboard, etc.)
-      navigate("/");
-    } else {
-      // no token? send user to login 
-      navigate("/login");
-    }
-  }, [search, storeTokenInLS, navigate]);
+    // Extract the token from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
 
-  return <p>Logging you in… please wait.</p>;
-}
+    if (token) {
+      storeTokenInLS(token);  // Store the token in local storage
+      navigate('/');  // Redirect to the home page after storing the token
+    } else {
+      console.error('No token found');
+    }
+  }, [storeTokenInLS, navigate]);
+
+  return (
+    <div>
+      <h2>Logging in...</h2>
+    </div>
+  );
+};
+
