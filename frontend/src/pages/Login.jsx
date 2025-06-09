@@ -1,27 +1,15 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// src/pages/Login.jsx
+import React, { useState } from "react";
 import { useAuth } from "../store/auth";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 
-export const Login = () => {
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
+export const Login = ({ onSuccess, onCancel }) => {
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const { storeTokenInLS } = useAuth();
 
-  const handleInput = (e) => {
-    let name = e.target.name;
-    let value = e.target.value;
-
-    setUser({
-      ...user,
-      [name]: value,
-    });
+  const handleChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
-
-
-const {storeTokenInLS} = useAuth();
-const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,72 +17,55 @@ const navigate = useNavigate();
     try {
       const response = await fetch("http://localhost:5000/api/auth/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(credentials),
       });
 
+      const data = await response.json();
       if (response.ok) {
-        const res_data = await response.json();
-        setUser({ email: "", password: "" });
-
-        storeTokenInLS(res_data.token);
-        toast.success("Logged in Successfully");
-
-
-        navigate("/");
+        storeTokenInLS(data.token);
+        toast.success("Logged in successfully");
+        onSuccess();
       } else {
-        toast.error("Invalid Credentials");
+        toast.error(data.message || "Login failed");
       }
-    } catch (error) {
-        console.log(error);
+    } catch (err) {
+      console.error(err);
+      toast.error("An unexpected error occurred");
     }
-
   };
 
   return (
-    <>
-      <section>
-        <main>
-          <div className="section-login">
-            <div className="container grid grid-two-cols">
-            
-
-              <div className="login-form">
-                <h1 className="main-heading mb-3">Login Form</h1>
-                <br />
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <label htmlFor="email">email</label>
-                    <input
-                      type="text"
-                      name="email"
-                      value={user.email}
-                      onChange={handleInput}
-                      placeholder="name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="password">password</label>
-                    <input
-                      type="text"
-                      name="password"
-                      value={user.password}
-                      onChange={handleInput}
-                      placeholder="password"
-                    />
-                  </div>
-                  <br />
-                  <button type="submit" className="btn-btn submit">
-                    Login Now
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </main>
-      </section>
-    </>
+    <div className="login-modal">
+      <h2>Log In</h2>
+      <br />
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            value={credentials.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            name="password"
+            type="password"
+            value={credentials.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="modal-buttons">
+          <button type="submit" className="btn-submit">
+            Log In
+          </button>
+        </div>
+      </form>
+    </div>
   );
-};
+}

@@ -5,6 +5,15 @@ import { useAuth } from "../../store/auth";
 import { toast } from "react-toastify";
 import { useState } from "react";
 
+const avatars = [
+  { img: "/images/@matchaqueen.png", alt: "@matchaqueen" },
+  { img: "/images/@bradley2000.png", alt: "@bradley2000" },
+  { img: "/images/@eatplaysleep.png", alt: "@eatplaysleep" },
+  { img: "/images/@conscious_cass.png", alt: "@conscious_cass" },
+  { img: "/images/@earthymamma.png", alt: "@earthymamma" },
+  { img: "/images/@flowerchild95.png", alt: "@flowerchild95" },
+];
+
 export const Home = () => {
   const [user, setUser] = useState({
     username: "",
@@ -150,35 +159,27 @@ export const Home = () => {
       </div>
 
       <section className="profile-carousel">
-        <div className="carousel-container">
-          <div className="avatars">
-            <div className="avatar">
-              <img src="/images/@matchaqueen.png" alt="@matchaqueen" />
-              <p>@matchaqueen</p>
-            </div>
-            <div className="avatar">
-              <img src="/images/@bradley2000.png" alt="@bradley2000" />
-              <p>@bradley2000</p>
-            </div>
-            <div className="avatar">
-              <img src="/images/@eatplaysleep.png" alt="@eatplaysleep" />
-              <p>@eatplaysleep</p>
-            </div>
-            <div className="avatar">
-              <img src="/images/@conscious_cass.png" alt="@conscious_cass" />
-              <p>@conscious_cass</p>
-            </div>
-            <div className="avatar">
-              <img src="/images/@earthymamma.png" alt="@earthymamma" />
-              <p>@earthymamma</p>
-            </div>
-            <div className="avatar">
-              <img src="/images/@flowerchild95.png" alt="@flowerchild95" />
-              <p>@flowerchild95</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="carousel-wrapper">
+    <div className="carousel-content">
+      {[...Array(3)].map((_, i) => (
+  <div className="avatars" key={i}>
+    {avatars.map((avatar, idx) => (
+      <div
+        className={`avatar ${idx === avatars.length - 1 ? "last-avatar" : ""}`}
+        key={`${i}-${idx}`}
+      >
+        <img src={avatar.img} alt={avatar.alt} />
+        <p>{avatar.alt}</p>
+      </div>
+    ))}
+  </div>
+))}
+    </div>
+  </div>
+</section>
+
+
+
 
       <section className="signup-box">
         <h2>Create a profile</h2>

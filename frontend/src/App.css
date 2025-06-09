@@ -14,7 +14,7 @@ body {
 }
 
 /* Rounded header section */
-.rounded-header {
+/* .rounded-header {
   background-color: #e9cfff;
   border-radius: 70px;
   padding: 1.2rem;
@@ -46,7 +46,7 @@ body {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-}
+} */
 .btn-login { background-color: #ff7b7b; color: white; }
 .btn-join { background-color: #62c384; color: white; }
 

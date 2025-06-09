@@ -27,26 +27,15 @@ export const AboutUs = () => {
         <h1>
           on a mission to make <em>conscious living</em> a subconscious choice
         </h1>
-        <p>
-          We’re a London/New York-based team building a community-led AI powered
-          platform. <br /> <br />
-          Like you, we got tired of the greenwashing, the endless scrolling, and
-          the overwhelm to find things that actually align with our values and
-          lifestyle. <br /> <br />
-          So we set out to build a space where discovering a cleaner life is easy,
-          inspiring, and fun. <br /> <br />
-          It started with CleanTV, our video channel spotlighting innovation,
-          circularity, and sustainability in fashion. We got to know designers,
-          founders, CEOs, and changemakers shaping a cleaner future — and their
-          stories sparked something bigger. <br /> <br />
-          Enter CleanClick: a new kind of platform that makes it effortless to find
-          clean brands, connect with conscious creators, and shop with intention.
-          <br /> <br />
-          <strong>
-            No preaching. No perfection. Just a cleaner lifestyle, one click at a
-            time.
-          </strong>
-        </p>
+        <div className="about-text">
+  <p>We’re a London/New York-based team building a community-led AI powered platform.</p>
+  <p>Like you, we got tired of the greenwashing, the endless scrolling, and the overwhelm to find things that actually align with our values and lifestyle.</p>
+  <p>So we set out to build a space where discovering a cleaner life is easy, inspiring, and fun.</p>
+  <p>It started with CleanTV, our video channel spotlighting innovation, circularity, and sustainability in fashion. We got to know designers, founders, CEOs, and changemakers shaping a cleaner future — and their stories sparked something bigger.</p>
+  <p>Enter CleanClick: a new kind of platform that makes it effortless to find clean brands, connect with conscious creators, and shop with intention.</p>
+  <p><strong>No preaching. No perfection. Just a cleaner lifestyle, one click at a time.</strong></p>
+</div>
+
       </section>
 
       <section className="signup-box">
