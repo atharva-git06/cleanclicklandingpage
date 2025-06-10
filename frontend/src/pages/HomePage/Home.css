@@ -5,6 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'PlayfairDisplay-Italic';
+  src: url('../../../public/images/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -101,16 +107,17 @@
     color: white;
   }
   .main_des h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    margin-bottom: 0.4rem;
     color: white;
   }
   
   .main_des p {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 650;
     color: white;
+    margin-bottom: 4rem;
   }
   
   .main_des p em {
@@ -143,8 +150,8 @@
   /* ✨ Sparkle icon positioning */
   .sparkle-icon {
     position: absolute;
-    top: -55px;     /* adjust as needed */
-    right: -40px;  /* position to top-right corner */
+    top: -45px;     /* adjust as needed */
+    right: -20px;  /* position to top-right corner */
     width: 100px;
     height: 100px;
     animation: twinkle 1.5s infinite ease-in-out;
@@ -265,14 +272,25 @@
   }
   
   .community h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1.5rem; /* optional to add small gap */
-    color: #333;
+    color: #ffffff;
   }
   
-  .community span {
-    color: #f4978e;
+  #community-led {
+    color: #ffffff;
+    font-family: 'PlayfairDisplay-Italic';
+    font-weight: 600;
+    
+  }
+  .AI-powered{
+    margin-left: 50px;
+  }
+  #clean-living{
+    /* font-style: italic; */
+    font-family: 'PlayfairDisplay-Italic';
+    margin-left: -240px;
   }
   
   /* If you use a container for circles */
@@ -377,14 +395,24 @@
   }
   
   /* Individual colors */
-  .tags span:nth-child(1), .tags span:nth-child(4), .tags span:nth-child(7) {
-    background-color: #f47b53; /* Orange */
+  /* .tags span:nth-child(1), .tags span:nth-child(4), .tags span:nth-child(7) {
+    background-color: #f47b53; 
   }
   .tags span:nth-child(2), .tags span:nth-child(5), .tags span:nth-child(8) {
-    background-color: #4caf50; /* Green */
+    background-color: #4caf50; 
   }
   .tags span:nth-child(3), .tags span:nth-child(6) {
-    background-color: #c25cd5; /* Purple */
+    background-color: #c25cd5; 
+  } */
+
+  .tags span:nth-child(1), .tags span:nth-child(4), .tags span:nth-child(7) {
+    background-color: #ff895d; 
+  }
+  .tags span:nth-child(2), .tags span:nth-child(5), .tags span:nth-child(8) {
+    background-color: #5ab17e; 
+  }
+  .tags span:nth-child(3), .tags span:nth-child(6) {
+    background-color: #d877c3; 
   }
   
   /* Search box */
@@ -495,7 +523,7 @@
 
 
   /* Signup */
-  .signup-box {
+  .signup-box-home {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(189, 224, 254, 0.4));
     padding: 3rem 2rem;
     text-align: center;
@@ -504,16 +532,21 @@
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     color: white;
+    font-family: 'BasierCircle-Regular', sans-serif;
+    
   }
-  .signup-box h2 {
+  .signup-box-home h2 {
     color: white;
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-family: 'BasierCircle-Regular', sans-serif;
+    
   }
-  .signup-box p {
+  .signup-box-home p {
     font-size: 1rem;
     margin-bottom: 2rem;
+    font-family: 'BasierCircle-Regular', sans-serif;
   }
   .signup-btn {
     background: transparent;
@@ -545,6 +578,7 @@
     /* background: linear-gradient(to bottom, #6ec1ff, #7cc9fd);  */
     text-align: left;
     padding: 4rem 2rem;
+    padding-bottom: 15rem;
     color: white;
     max-width: 800px;
     margin: 0 auto;
@@ -555,18 +589,22 @@
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #ffffff;
+    font-family: 'BasierCircle-Regular', sans-serif;
   }
   
   .definition h3 span {
     font-size: 1.5rem;
     font-style: italic;
     color: white;
+    font-family: 'BasierCircle-Regular', sans-serif;
+    font-weight: bold;
   }
   
   .definition .part-of-speech {
     font-weight: bold;
     color: #ffffff;
     margin-top: 1rem;
+    font-family: 'BasierCircle-Regular', sans-serif;
   }
   
   .definition .definition-text {
@@ -574,12 +612,14 @@
     font-size: 1rem;
     color: #ffffff;
     line-height: 1.6;
+    font-family: 'BasierCircle-Regular', sans-serif;
   }
   
   .definition .example {
     font-style: italic;
     color: white;
     margin-top: 1rem;
+    font-family: 'BasierCircle-Regular', sans-serif;
   }
   
   /* Footer */

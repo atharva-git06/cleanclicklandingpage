@@ -23,9 +23,9 @@ export const AboutUs = () => {
 
   return (
     <>
-      <section className="main_des">
+      <section className="main_des1">
         <h1>
-          on a mission to make <em>conscious living</em> a subconscious choice
+          on a mission to make <em>conscious living</em> <br /> a subconscious choice
         </h1>
         <div className="about-text">
   <p>We’re a London/New York-based team building a community-led AI powered platform.</p>
@@ -33,7 +33,7 @@ export const AboutUs = () => {
   <p>So we set out to build a space where discovering a cleaner life is easy, inspiring, and fun.</p>
   <p>It started with CleanTV, our video channel spotlighting innovation, circularity, and sustainability in fashion. We got to know designers, founders, CEOs, and changemakers shaping a cleaner future — and their stories sparked something bigger.</p>
   <p>Enter CleanClick: a new kind of platform that makes it effortless to find clean brands, connect with conscious creators, and shop with intention.</p>
-  <p><strong>No preaching. No perfection. Just a cleaner lifestyle, one click at a time.</strong></p>
+  <p id="about-text-strn"><strong>No preaching. No perfection. Just a cleaner lifestyle, one click at a time.</strong></p>
 </div>
 
       </section>

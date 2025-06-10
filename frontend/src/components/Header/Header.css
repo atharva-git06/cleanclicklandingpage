@@ -19,6 +19,8 @@
     padding: 0.3rem 1rem;
     border-radius: 15px;
     text-decoration: none;
+    font-family: 'BasierCircle-Regular', sans-serif;
+    font-weight: bold;
   }
   
   .btns button {
@@ -31,6 +33,14 @@
   }
   .btn-login { background-color: #ff7b7b; color: white; }
   .btn-create_a_profile  { background-color: #62c384; color: white; }
+  .btn-logout { background-color: #ff0000; color: rgb(255, 255, 255);
+  height:35px;
+width: 100px; 
+border-radius:10%;
+}
+.btn-logout:hover{
+  cursor: pointer;
+}
   
   @media (max-width: 768px) {
   .rounded-header {

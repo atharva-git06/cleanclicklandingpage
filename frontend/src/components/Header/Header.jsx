@@ -38,7 +38,7 @@ const Header = () => {
             </div>
           ) : (
             <NavLink to="/logout">
-              <button className="btn-login">Log Out</button>
+              <button  className="btn-logout">Log Out</button>
             </NavLink>
           )}
         </div>

@@ -88,11 +88,11 @@ export const Home = () => {
       <section className="community">
         <div className="hero-heading-wrapper">
           <h2 className="hero-heading">
-            We're a <span className="italic">community-led</span>
+            we're a <span id="community-led" className="italic">community-led</span>
             <br />
-            <strong>AI-powered platform for</strong>
+            <strong class="AI-powered">AI-powered platform for</strong>
             <br />
-            <span className="italic">clean living.</span>
+            <span id="clean-living" className="italic">clean living.</span>
           </h2>
           <img src="/images/spark.png" alt="sparkle" className="sparkle-icon" />
         </div>
@@ -181,7 +181,7 @@ export const Home = () => {
 
 
 
-      <section className="signup-box">
+      <section className="signup-box-home">
         <h2>Create a profile</h2>
         <p>
           The first 1000 sign-ups receive free perks and benefits for life -

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'PlayfairDisplay-Italic';
+  src: url('../../../public/images/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .invest-form {
     max-width: 800px;
     margin: 5rem auto;
@@ -9,18 +15,26 @@
   .invest-bubble {
     background: white;
     border-radius: 25px 25px 25px 0;
-    padding: 1.2rem 1.5rem;
+    padding: 1.8rem 5rem;
+    opacity: 0.8;
     margin-bottom: 2rem;
     display: inline-block;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
-  
+  .invest-bubble p em{
+    font-family: 'PlayfairDisplay-Italic';
+    font-weight: 900;
+  }
   .invest-bubble p {
-    font-family: 'Georgia', serif;
-    font-style: italic;
+    font-family: 'PlayfairDisplay-Italic';
     color: #333;
     font-size: 1.1rem;
     line-height: 1.5;
+    font-weight: 900;
+  }
+    .invest-contact ::placeholder{
+    color: rgb(0, 0, 0);
+    font-weight: 400;
   }
   
   .invest-contact {
