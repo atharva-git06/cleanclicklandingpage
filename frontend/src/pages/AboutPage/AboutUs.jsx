@@ -48,12 +48,12 @@ export const AboutUs = () => {
         <button  onClick={handleSubmitWithGoogle} className="signup-btn google">
           <i className="fab fa-google"></i> Sign in with Google
         </button>
-        <button className="signup-btn facebook">
+        {/* <button className="signup-btn facebook">
           <i className="fab fa-facebook-f"></i> Sign in with Facebook
         </button>
         <button className="signup-btn apple">
           <i className="fab fa-apple"></i> Sign in with Apple
-        </button>
+        </button> */}
       </section>
     </>
   );

@@ -44,7 +44,7 @@ export const Home = () => {
   return (
     <>
       <section className="main_des">
-        <h1>clean living starts here</h1>
+        <h1>Clean living starts here</h1>
         <p>
           The platform for <em>clean</em> fashion, beauty, and wellness.
         </p>
@@ -81,8 +81,8 @@ export const Home = () => {
         <div className="div9">
           <img src="/images/img9.png" alt="shine" />
         </div>
-        <div className="label-left">shop</div>
-        <div className="label-right">connect</div>
+        {/* <div className="label-left">shop</div>
+        <div className="label-right">connect</div> */}
       </section>
 
       <section className="community">
@@ -94,7 +94,7 @@ export const Home = () => {
             <br />
             <span id="clean-living" className="italic">clean living.</span>
           </h2>
-          <img src="/images/spark.png" alt="sparkle" className="sparkle-icon" />
+          {/* <img src="/images/spark.png" alt="sparkle" className="sparkle-icon" /> */}
         </div>
       </section>
 
@@ -117,7 +117,7 @@ export const Home = () => {
         <div className="category-circles">
           <div
             className="circle small"
-            style={{ backgroundImage: "url('/images/img6.jpg')" }}
+            style={{ backgroundImage: "url('/images/img12.jpg')" }}
           >
             <span>fashion</span>
           </div>
@@ -129,7 +129,7 @@ export const Home = () => {
           </div>
           <div
             className="circle small"
-            style={{ backgroundImage: "url('/images/yoga.png')" }}
+            style={{ backgroundImage: "url('/images/img1.png')" }}
           >
             <span>wellness</span>
           </div>
@@ -157,6 +157,27 @@ export const Home = () => {
           <i className="fas fa-microphone mic-icon"></i>
         </div>
       </div>
+
+      <section className="definition">
+        <h3>
+          clean
+          <br />
+          <span>/kliːn/</span>
+        </h3>
+        <p className="part-of-speech">
+          <strong>adjective</strong>
+        </p>
+        <p className="definition-text">
+          A new standard for conscious living, describes products and practices
+          that are responsibly made, cruelty-free, circular, low waste, and high
+          quality.
+        </p>
+        <p className="example">
+          <em>
+            You can tell she uses clean skincare products, her skin is glowing!
+          </em>
+        </p>
+      </section>
 
       <section className="profile-carousel">
   <div className="carousel-wrapper">
@@ -191,34 +212,15 @@ export const Home = () => {
         <button onClick={handleSubmit} className="signup-btn google">
           <i className="fab fa-google"></i> Sign in with Google
         </button>
-        <button className="signup-btn facebook">
+        {/* <button className="signup-btn facebook">
           <i className="fab fa-facebook-f"></i> Sign in with Facebook
         </button>
         <button className="signup-btn apple">
           <i className="fab fa-apple"></i> Sign in with Apple
-        </button>
+        </button> */}
       </section>
 
-      <section className="definition">
-        <h3>
-          clean
-          <br />
-          <span>/kliːn/</span>
-        </h3>
-        <p className="part-of-speech">
-          <strong>adjective</strong>
-        </p>
-        <p className="definition-text">
-          A new standard for conscious living, describes products and practices
-          that are responsibly made, cruelty-free, circular, low waste, and high
-          quality.
-        </p>
-        <p className="example">
-          <em>
-            You can tell she uses clean skincare products, her skin is glowing!
-          </em>
-        </p>
-      </section>
+      
     </>
   );
 };
