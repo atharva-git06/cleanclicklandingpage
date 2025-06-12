@@ -14,10 +14,7 @@ body{
   background: linear-gradient(
     to bottom,
     #ff815a 0%,
-    #facfc2 45%,   /* soft light-peach near top */
-    /* #f2f9ff 50%,    */
-    #5caffc 65%,
-    #55adff 100%   /* sky blue at bottom */
+    #ffffff 100%   /* sky blue at bottom */
   );
 }
 .main_des1 {

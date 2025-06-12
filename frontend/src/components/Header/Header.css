@@ -35,10 +35,11 @@
   }
   .btn-login { background-color: #ff7b7b; color: white; }
   .btn-create_a_profile  { background-color: #62c384; color: white; }
-  .btn-logout { background-color: #ff0000; color: rgb(255, 255, 255);
-  height:35px;
-  width: 100px; 
-  border-radius:10%;
+  .btn-logout { background-color: #f44d75; color: rgb(255, 255, 255);
+  height:32px;
+  width: 80px; 
+  border-color: #f44d75;
+  border-radius:20px;
   }
   .btn-logout:hover{
     cursor: pointer;
@@ -63,6 +64,13 @@
   .btns button {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
+  }
+  .btn-logout {
+  height:24px;
+  width: 50px; 
+  border-color: #f44d75;
+  border-radius:20px;
+  font-size: 0.6rem;
   }
 
   .nav-bar button {

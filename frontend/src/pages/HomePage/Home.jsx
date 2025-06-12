@@ -12,6 +12,10 @@ const avatars = [
   { img: "/images/@conscious_cass.png", alt: "@conscious_cass" },
   { img: "/images/@earthymamma.png", alt: "@earthymamma" },
   { img: "/images/@flowerchild95.png", alt: "@flowerchild95" },
+  { img: "/images/@dogmom.png", alt: "@dogmom" },
+  { img: "/images/@hannahbanana.png", alt: "@hannahbanana" },
+  { img: "/images/@liveslowdieold.png", alt: "@liveslowdieold" },
+  { img: "/images/@marykate96.png", alt: "@marykate96" },
 ];
 
 export const Home = () => {
@@ -51,41 +55,47 @@ export const Home = () => {
       </section>
 
       <section className="grid-gallery">
-        <div className="div1">
-          <img src="/images/img1.png" alt="shop" />
+      {/* Card 1: Discover with Search Bar */}
+      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
+        <div className="grid-text1">discover</div>
+        <div className="search-bar-grid">
+          <img src="/images/search.png" alt="search" className="icon" />
+          <img src="/images/micphone.png" alt="mic" className="icon" />
         </div>
-        <div className="div2">
-          <img src="/images/img2.png" alt="discover" />
-        </div>
-        <div className="div3">
-          <img src="/images/img3.png" alt="watch" />
-        </div>
-        <div className="div4">
-          <img src="/images/img4.png" alt="learn" />
-        </div>
-        <div className="div5">
-          <video autoPlay muted loop playsInline>
-            <source src="/videos/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="div6">
-          <img src="/images/img6.jpg" alt="denim" />
-        </div>
-        <div className="div7">
-          <img src="/images/img7.png" alt="eco" />
-        </div>
-        <div className="div8">
-          <img src="/images/img8.png" alt="vibe" />
-        </div>
-        <div className="div9">
-          <img src="/images/img9.png" alt="shine" />
-        </div>
-        {/* <div className="label-left">shop</div>
-        <div className="label-right">connect</div> */}
-      </section>
+      </div>
 
-      <section className="community">
+      {/* Card 2: Connect */}
+      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
+        <div className="grid-text2">connect</div>
+        <div className="card-avatar">
+          <div className="card-avatar-i">
+            <img src="/images/dress.jpg" alt="@dogmom" />
+            <div className="card-avatar-i-label">@dogmom</div>
+          </div>
+          <div className="card-avatar-i">
+            <img src="/images/cream.jpg" alt="@conscious_cass" />
+            <div className="card-avatar-i-label">@conscious_cass</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3: Watch with Play Icon */}
+      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
+        <img src="/images/play btn.png" alt="Play" className="play-icon-img" />
+        <div className="grid-text3">watch</div>
+      </div>
+
+      {/* Card 4: Shop with Search Bar */}
+      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
+        <div className="grid-text4">shop</div>
+        <div className="search-bar-grid">
+          <img src="/images/search.png" alt="search" className="icon" />
+          <img src="/images/micphone.png" alt="mic" className="icon" />
+        </div>
+      </div>
+    </section>
+
+      {/* <section className="community">
         <div className="hero-heading-wrapper">
           <h2 className="hero-heading">
             we're a <span id="community-led" className="italic">community-led</span>
@@ -93,9 +103,29 @@ export const Home = () => {
             <strong class="AI-powered">AI-powered platform for</strong>
             <br />
             <span id="clean-living" className="italic">clean living.</span>
-          </h2>
+          </h2> */}
           {/* <img src="/images/spark.png" alt="sparkle" className="sparkle-icon" /> */}
-        </div>
+        {/* </div>
+      </section> */}
+      <section className="definition">
+        <h3>
+          clean
+          <br />
+          <span>/kliːn/</span>
+        </h3>
+        <p className="part-of-speech">
+          <strong>adjective</strong>
+        </p>
+        <p className="definition-text">
+          A new standard for conscious living, describes products and practices
+          that are responsibly made, cruelty-free, circular, low waste, and high
+          quality.
+        </p>
+        <p className="example">
+          <em>
+            You can tell she uses clean skincare products, her skin is glowing!
+          </em>
+        </p>
       </section>
 
       <div className="category-wrapper">
@@ -137,17 +167,16 @@ export const Home = () => {
       </div>
 
       <div className="tags">
+        <span>DIY lip balm</span>
         <span>thrifting hacks</span>
         <span>how to make matcha</span>
         <span>clean beauty brands</span>
-        <span>slow fashion</span>
         <span>managing PCOS</span>
-        <span>DIY lip balm</span>
         <span>how does fashion rental work?</span>
         <span>breathwork techniques</span>
       </div>
 
-      <div className="search-wrapper">
+      {/* <div className="search-wrapper">
         <div className="search-bar">
           <i className="fas fa-search search-icon"></i>
           <input
@@ -156,9 +185,52 @@ export const Home = () => {
           />
           <i className="fas fa-microphone mic-icon"></i>
         </div>
-      </div>
+      </div> */}
 
-      <section className="definition">
+      <div className="chat-ui-box">
+  {/* Search input inside the chat box */}
+  <div className="search-bar-ui">
+    <i className="fas fa-search search-icon"></i>
+    <input
+      type="text"
+      placeholder="Have a chat with the bot"
+    />
+    <i className="fas fa-microphone mic-icon"></i>
+  </div>
+
+  {/* Chat conversation */}
+  <div className="chat-container">
+    <div className="chat user">
+      The best places in London for vintage fashion?
+    </div>
+
+    <div className="chat bot">
+      If you're looking for vintage fashion, London is the place for it! Are you shopping online or in person?
+    </div>
+
+    <div className="chat user">
+      In person
+    </div>
+
+    <div className="chat bot">
+      <p>Sure! Here's some of the best vintage shops in London for a fun day out:</p>
+      <ul>
+        <li>House of Vintage – Shoreditch</li>
+        <li>Atika – Brick Lane</li>
+        <li>Rellik – Notting Hill</li>
+        <li>Beyond Retro – Dalston & Soho</li>
+        <li>Nordic Poetry – Hackney</li>
+        <li>Retromania – Victoria</li>
+        <li>Goldsmith Vintage – Soho, Camden, Greenwich</li>
+        <li>One of a Kind Archive – Portobello Road</li>
+        <li>128 - Hackney Road</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      {/* <section className="definition">
         <h3>
           clean
           <br />
@@ -177,7 +249,7 @@ export const Home = () => {
             You can tell she uses clean skincare products, her skin is glowing!
           </em>
         </p>
-      </section>
+      </section> */}
 
       <section className="profile-carousel">
   <div className="carousel-wrapper">
@@ -212,14 +284,13 @@ export const Home = () => {
         <button onClick={handleSubmit} className="signup-btn google">
           <i className="fab fa-google"></i> Sign in with Google
         </button>
-        {/* <button className="signup-btn facebook">
-          <i className="fab fa-facebook-f"></i> Sign in with Facebook
+        <button className="signup-btn facebook">
+          <i className="fa fa-envelope"></i> Sign in with Mail
         </button>
-        <button className="signup-btn apple">
+                {/* <button className="signup-btn apple">
           <i className="fab fa-apple"></i> Sign in with Apple
         </button> */}
       </section>
-
       
     </>
   );
