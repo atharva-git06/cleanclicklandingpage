@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.invest-form {
+/* .invest-form {
     max-width: 800px;
     margin: 5rem auto;
     padding: 2rem;
@@ -68,4 +68,34 @@
     cursor: pointer;
     align-self: flex-end;
     width: 150px;
-  }
+  } */
+
+  .invest-section {
+  text-align: center;
+  padding: 8rem 1.5rem;
+  /* background: linear-gradient(to bottom, #c1e3d5, white); */
+  font-family: 'BasierCircle-Regular', sans-serif;
+  border-radius: 10px;
+}
+
+.invest-section h3 {
+  font-family: 'PlayfairDisplay-Italic';
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.invest-section p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.invest-section .invest-email {
+  padding-top: 1.5rem;
+  font-weight: bold;
+  color: #444343;
+  margin-top: 1rem;
+}

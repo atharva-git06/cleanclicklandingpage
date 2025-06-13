@@ -56,54 +56,19 @@ const Invest = () => {
   return (
     <>
       <section className="invest-form">
-        <div className="invest-bubble">
-          <p>
-            <em>If you're interested in investing in CleanClick</em>
-            <br />
-            we’d love to hear from you.
-          </p>
-        </div>
-
-        <form className="invest-contact" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-           // type="url"
-            name="website"
-            placeholder="Website (optional)"
-            value={formData.website}
-            onChange={handleInputChange}
-          />
-          <input
-            //type="url"
-            name="linkedin"
-            placeholder="LinkedIn (optional)"
-            value={formData.linkedin}
-            onChange={handleInputChange}
-          />
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Message (optional)"
-            value={formData.message}
-            onChange={handleInputChange}
-          />
-          <button type="submit">Send</button>
-        </form>
+        <div className="invest-section">
+  <h3>Invest in us</h3>
+  <p>
+    CleanClick is where impact meets opportunity—<br />
+    the intersection of tech, community, and conscious commerce.
+  </p> <br />
+  <p>
+    We invite mission-aligned investors to help us scale this movement, to<br />
+    shape a cleaner, brighter future for generations to come.
+  </p> <br />
+  <p>Get in touch to explore our deck and next steps.</p>
+  <p className="invest-email"><strong>hello@cleanclick.com</strong></p>
+</div>
       </section>
     </>
   );

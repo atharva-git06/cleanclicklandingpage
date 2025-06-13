@@ -56,42 +56,28 @@ export const Home = () => {
 
       <section className="grid-gallery">
       {/* Card 1: Discover with Search Bar */}
-      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
-        <div className="grid-text1">discover</div>
-        <div className="search-bar-grid">
-          <img src="/images/search.png" alt="search" className="icon" />
-          <img src="/images/micphone.png" alt="mic" className="icon" />
-        </div>
+      <div className="card" style={{ backgroundImage: "url('/images/grid-1.png')" }}>
       </div>
 
       {/* Card 2: Connect */}
-      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
-        <div className="grid-text2">connect</div>
-        <div className="card-avatar">
-          <div className="card-avatar-i">
-            <img src="/images/dress.jpg" alt="@dogmom" />
-            <div className="card-avatar-i-label">@dogmom</div>
-          </div>
-          <div className="card-avatar-i">
-            <img src="/images/cream.jpg" alt="@conscious_cass" />
-            <div className="card-avatar-i-label">@conscious_cass</div>
-          </div>
-        </div>
+      <div className="card" style={{ backgroundImage: "url('/images/grid-2.png')" }}>
       </div>
 
       {/* Card 3: Watch with Play Icon */}
-      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
-        <img src="/images/play btn.png" alt="Play" className="play-icon-img" />
-        <div className="grid-text3">watch</div>
-      </div>
+      <div className="card">
+  <video
+    className="card-video"
+    src="/videos/homepage.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    poster="/images/img12.jpg"
+  ></video>
+</div>
 
       {/* Card 4: Shop with Search Bar */}
-      <div className="card" style={{ backgroundImage: "url('/images/img12.jpg')" }}>
-        <div className="grid-text4">shop</div>
-        <div className="search-bar-grid">
-          <img src="/images/search.png" alt="search" className="icon" />
-          <img src="/images/micphone.png" alt="mic" className="icon" />
-        </div>
+      <div className="card" style={{ backgroundImage: "url('/images/grid-4.png')" }}>
       </div>
     </section>
 
@@ -193,7 +179,8 @@ export const Home = () => {
     <i className="fas fa-search search-icon"></i>
     <input
       type="text"
-      placeholder="Have a chat with the bot"
+      placeholder="Start a chat with your clean living assistant"
+      readOnly
     />
     <i className="fas fa-microphone mic-icon"></i>
   </div>

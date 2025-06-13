@@ -59,16 +59,10 @@ const Partner = () => {
     <>
       <section className="partner-form">
         <div className="partner-bubble">
-          <p>
-            <em>
-              If you’re a clean fashion, beauty, or wellness brand,
-              <br />
-              company, or creator and we haven’t found you yet,
-              <br />
-              please get in touch with us!
-            </em>
-          </p>
-        </div>
+  <h3>Partner with us</h3>
+  <p>Showcase your brand to our conscious, curious community.</p>
+  <p>Become an affiliate partner on CleanClick.</p>
+</div>
 
         <form className="partner-contact" onSubmit={handleSubmit}>
           <input
@@ -119,6 +113,7 @@ const Partner = () => {
           />
           <button type="submit">Send</button>
         </form>
+        <h3>Clean clicks. Real impact. Together.</h3>
       </section>
     </>
   );
