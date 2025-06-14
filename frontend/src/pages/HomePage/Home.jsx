@@ -4,6 +4,9 @@ import "./Home.css";
 import { useAuth } from "../../store/auth";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import Header from "../../components/Header/Header";
+import { Navbar } from "../../components/NavbarComponent/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const avatars = [
   { img: "/images/@matchaqueen.png", alt: "@matchaqueen" },
@@ -47,7 +50,12 @@ export const Home = () => {
 
   return (
     <>
+    <section className="h-body">
       <section className="main_des">
+        <Navbar/>
+        <Header/>
+
+
         <h1>Clean living starts here</h1>
         <p>
           The platform for <em>clean</em> fashion, beauty, and wellness.
@@ -278,7 +286,8 @@ export const Home = () => {
           <i className="fab fa-apple"></i> Sign in with Apple
         </button> */}
       </section>
-      
+      <Footer/>
+      </section>
     </>
   );
 };

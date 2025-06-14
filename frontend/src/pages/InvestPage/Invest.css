@@ -4,6 +4,19 @@
   font-weight: normal;
   font-style: normal;
 }
+.invest-form-body{
+    margin: 0;
+  padding-top: 3rem;
+    padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  min-height: 100vh;
+   background: linear-gradient(
+    to bottom,
+    #5ab17e 0%,
+    #ffffff 80%   
+  );
+}
 /* .invest-form {
     max-width: 800px;
     margin: 5rem auto;
@@ -98,4 +111,32 @@
   font-weight: bold;
   color: #444343;
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .invest-form-body{
+    padding-left: 2rem;
+  padding-right: 2rem;
+  
+}
+  .invest-section h3 {
+    font-size: 2rem;
+  }
+
+  .invest-section p,
+  .invest-section .invest-email {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .invest-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .invest-section p,
+  .invest-section .invest-email {
+    font-size: 0.95rem;
+  }
 }

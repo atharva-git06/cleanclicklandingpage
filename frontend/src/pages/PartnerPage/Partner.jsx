@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Partner.css";
 import { toast } from "react-toastify";
+import { Navbar } from "../../components/NavbarComponent/Navbar";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 const Partner = () => {
   // Define the state for form fields
@@ -57,6 +60,9 @@ const Partner = () => {
 
   return (
     <>
+    <section className="partner-body">
+      <Navbar/>
+      <Header/>
       <section className="partner-form">
         <div className="partner-bubble">
   <h3>Partner with us</h3>
@@ -111,10 +117,12 @@ const Partner = () => {
             value={formData.message}
             onChange={handleInputChange}
           />
-          <button type="submit">Send</button>
+          <button type="submit">Submit</button>
         </form>
         <h3>Clean clicks. Real impact. Together.</h3>
       </section>
+      </section>
+      <Footer/>
     </>
   );
 };

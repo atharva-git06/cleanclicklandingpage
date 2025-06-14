@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Invest.css';
 import { toast } from 'react-toastify';
+import { Navbar } from '../../components/NavbarComponent/Navbar';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const Invest = () => {
   // Define the state for form fields
@@ -55,7 +58,9 @@ const Invest = () => {
 
   return (
     <>
-      <section className="invest-form">
+      <section className="invest-form-body">
+        <Navbar/>
+        <Header/>
         <div className="invest-section">
   <h3>Invest in us</h3>
   <p>
@@ -69,7 +74,9 @@ const Invest = () => {
   <p>Get in touch to explore our deck and next steps.</p>
   <p className="invest-email"><strong>hello@cleanclick.com</strong></p>
 </div>
+
       </section>
+      <Footer/>
     </>
   );
 };

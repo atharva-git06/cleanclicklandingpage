@@ -1,7 +1,55 @@
-import React from 'react';
 import './Footer.css'
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+
+
 
 const Footer = () => {
+
+  const [email, setEmail] = useState({
+      email: '',
+      
+    });
+  
+    // Handle form input change
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setEmail({
+        ...email,
+        [name]: value,
+      });
+    };
+  
+    // Handle form submission
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      // Perform form validation or data submission
+      try {
+        const response = await fetch('http://localhost:5000/api/messages/subscribeUs', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(email),
+        });
+  
+        const data = await response.json();
+        if (response.ok) {
+          toast.success('Thanks For Subscribing');
+          // Reset the form
+          setEmail({
+            email: '',
+          });
+        } else {
+          toast.error(data.message || 'An error occurred.');
+        }
+      } catch (err) {
+        console.error(err);
+        toast.error('An unexpected error occurred');
+      }
+    };
+
+
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
@@ -20,12 +68,22 @@ const Footer = () => {
           <label htmlFor="newsletter" className="newsletter-label">
             sign up to our newsletter:
           </label>
-          <input
-            type="text"
+          <form  onSubmit={handleSubmit}>
+          <input 
+            type="email"
             id="newsletter"
             placeholder="Enter your email"
             className="newsletter-input"
+            onChange={handleInputChange}
+            required
           />
+          <div className="subscribe-button">
+          <button type="submit" className="btn-submit">
+            Subscribe
+          </button>
+        </div>
+          </form>
+          
 
           <div className="social-footer">
         <p className="footer-tags-p" style={{ fontWeight: 'bold' }}>stay in the loop</p>

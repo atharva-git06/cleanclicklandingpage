@@ -4,11 +4,14 @@
   font-weight: normal;
   font-style: normal;
 }
-.partner-form body{
+.partner-body{
+  padding-top: 3rem;
+    padding-left: 2rem;
+  padding-right: 2rem;
   background: linear-gradient(
     to bottom,
-    #099615 0%,
-    #ffffff 100%   /* sky blue at bottom */
+    #5ab17e 0%,
+    #ffffff 80%   
   );
 }
 .partner-form {
@@ -34,7 +37,7 @@
   font-family: 'PlayfairDisplay-Italic';
   font-style: italic;
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #111;
   margin-bottom: 1rem;
 }
@@ -60,7 +63,7 @@
     margin-top: 5rem;
   }
   .partner-contact ::placeholder{
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     font-weight: 400;
   }
   
@@ -76,7 +79,7 @@
   }
   
   .partner-contact button {
-    background-color: #c87ff5;
+    background-color: #ff895d;
     color: white;
     padding: 1rem 1.2rem;
     border: none;
@@ -87,6 +90,6 @@
     width: 150px;
   }
   .partner-form h3{
-    color: rgb(88, 88, 88);
+    color: rgb(0, 0, 0);
     padding-top: 4rem;
   }

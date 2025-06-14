@@ -17,8 +17,8 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-      <Navbar />
-      <Header />
+      {/* <Navbar />
+      <Header /> */}
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/oauth-success" element={<OAuthSuccess />} />
@@ -32,7 +32,7 @@ const App = () => {
 
 
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

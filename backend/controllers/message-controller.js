@@ -1,5 +1,6 @@
 const Partner = require('../models/partner-model')
-const Invest = require('../models/invest-model')
+const Invest = require('../models/invest-model');
+const Subscribe = require('../models/subscribe-model');
 
 const partnerMessage = async (req,res) =>{
     const{name,companyName,email, website,socials,message} = req.body;
@@ -25,5 +26,17 @@ const investMessage = async (req,res) =>{
 
 }
 
+const subscribeEmail = async (req,res) =>{
+  const{email} = req.body;
+  const createMessage = await Subscribe.create({email});
+  res
+      .status(201)
+      .json({
+        msg: createMessage,
+      });
 
-module.exports = {partnerMessage, investMessage};
+
+}
+
+
+module.exports = {partnerMessage, investMessage, subscribeEmail};
