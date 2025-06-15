@@ -1,9 +1,7 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
 import React from "react";
 import "./Home.css";
 import { useAuth } from "../../store/auth";
 import { toast } from "react-toastify";
-import { useState } from "react";
 import Header from "../../components/Header/Header";
 import { Navbar } from "../../components/NavbarComponent/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -22,15 +20,9 @@ const avatars = [
 ];
 
 export const Home = () => {
-  const [user, setUser] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
+ 
   const { isLoggedIn } = useAuth();
-  const { storeTokenInLS } = useAuth();
 
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     if(isLoggedIn){

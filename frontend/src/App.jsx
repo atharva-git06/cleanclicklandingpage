@@ -4,11 +4,8 @@ import { Login } from "./pages/Login";
 import { Home } from "./pages/HomePage/Home";
 import { Logout } from "./pages/Logout";
 import { OAuthSuccess } from "./pages/oAuthSuccess";
-import { Navbar } from "./components/NavbarComponent/Navbar.jsx";
 // import ContactUs from "./pages/ContactUs";
 import Partner from "./pages/PartnerPage/Partner.jsx";
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 import Invest from "./pages/InvestPage/Invest.jsx";
 import { AboutUs } from "./pages/AboutPage/AboutUs.jsx";
 
@@ -18,7 +15,8 @@ const App = () => {
     <>
       <BrowserRouter>
       {/* <Navbar />
-      <Header />  change */ }
+      <Header />  change not up to date
+       */ }
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/oauth-success" element={<OAuthSuccess />} />

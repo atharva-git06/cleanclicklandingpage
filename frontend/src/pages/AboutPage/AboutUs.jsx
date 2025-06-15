@@ -1,6 +1,5 @@
 import React from "react";
 import "./AboutUs.css";
-import { IoSearchCircle } from "react-icons/io5";
 import { MdPersonAddAlt1 } from "react-icons/md";
 import { BiSearch } from "react-icons/bi";
 import { IoCartSharp } from "react-icons/io5";
