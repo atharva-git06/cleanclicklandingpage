@@ -1,6 +1,7 @@
 import './Footer.css'
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+const API_URL = process.env.BACKEND_URL;
 
 
 
@@ -26,7 +27,7 @@ const Footer = () => {
   
       // Perform form validation or data submission
       try {
-        const response = await fetch('http://localhost:5000/api/messages/subscribeUs', {
+        const response = await fetch(`${API_URL}/messages/subscribeUs`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(email),

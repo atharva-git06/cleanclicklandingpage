@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+const API_URL = process.env.BACKEND_URL;
 
 export const Login = ({ onSuccess, onCancel }) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -15,7 +16,7 @@ export const Login = ({ onSuccess, onCancel }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials),

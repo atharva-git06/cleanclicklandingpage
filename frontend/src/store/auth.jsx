@@ -1,4 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
+const API_URL = process.env.BACKEND_URL;
+
 
 export const AuthContext = createContext();
 
@@ -15,7 +17,7 @@ export const AuthProvider = ({ children }) => {
         console.log("Checking if we have token or not: " + token);
 
         try {
-            const response = await fetch("http://localhost:5000/api/auth/user", {
+            const response = await fetch(`${API_URL}/auth/user`, {
                 method: 'GET',
                 headers: {
                     Authorization: AuthorizationToken

@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import { Navbar } from "../../components/NavbarComponent/Navbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+const API_URL = process.env.BACKEND_URL;
+
 
 const Partner = () => {
   // Define the state for form fields
@@ -31,7 +33,7 @@ const Partner = () => {
     
     // Perform form validation or data submission
     try {
-      const response = await fetch("http://localhost:5000/api/messages/partnerMessage", {
+      const response = await fetch(`${API_URL}/messages/partnerMessage`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import Header from "../../components/Header/Header";
 import { Navbar } from "../../components/NavbarComponent/Navbar";
 import Footer from "../../components/Footer/Footer";
+const API_URL = process.env.BACKEND_URL;
+
 
 const avatars = [
   { img: "/images/@matchaqueen.png", alt: "@matchaqueen" },
@@ -30,7 +32,7 @@ export const Home = () => {
     }
     else{
       try {
-        window.location.href = "http://localhost:5000/api/auth/google";
+        window.location.href = `${API_URL}/auth/google`;
       } catch (error) {
         console.log(error);
       }

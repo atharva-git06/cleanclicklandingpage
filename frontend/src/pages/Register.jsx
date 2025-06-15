@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+const API_URL = process.env.BACKEND_URL;
 
 export const Register = ({ onSuccess, onCancel }) => {
   const [user, setUser] = useState({ username: "", email: "", password: "" });
@@ -16,7 +17,7 @@ export const Register = ({ onSuccess, onCancel }) => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${API_URL}/auth/register`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -39,7 +40,7 @@ export const Register = ({ onSuccess, onCancel }) => {
   };
 
   const handleGoogleSignup = () => {
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href = `${API_URL}/auth/google`;
   };
 
   return (
