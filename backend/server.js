@@ -12,7 +12,7 @@ const router = require('./router/auth-router');
 const messageRouter = require('./router/message-router')
 const connectDb = require('./utils/db');
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: ["https://cleanclicklandingpage-4ort-3hqh7tkli-atharva-chavans-projects.vercel.app"],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
