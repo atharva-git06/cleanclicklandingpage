@@ -18,7 +18,7 @@ const App = () => {
     <>
       <BrowserRouter>
       {/* <Navbar />
-      <Header /> */}
+      <Header />  change */ }
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/oauth-success" element={<OAuthSuccess />} />
