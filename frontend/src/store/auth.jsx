@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useCallback } from "react";
 
 export const AuthContext = createContext();
 
@@ -8,8 +8,8 @@ export const AuthProvider = ({ children }) => {
     const [userData, setUserData] = useState("");
     const AuthorizationToken = `Bearer ${token}`;
 
-    // Fetch user data if token exists
-    const userAuthentication = async () => {
+    // Memoize the userAuthentication function using useCallback
+    const userAuthentication = useCallback(async () => {
         if (!token) return;
 
         console.log("Checking if we have token or not: " + token);
@@ -33,11 +33,11 @@ export const AuthProvider = ({ children }) => {
         } catch (error) {
             console.log("Error while fetching user:", error);
         }
-    };
+    }, [token, AuthorizationToken]); // Add token and AuthorizationToken as dependencies
 
     useEffect(() => {
         userAuthentication();
-    }, [token]);
+    }, [userAuthentication]); // Add userAuthentication as a dependency
 
     // Store token in localStorage
     const storeTokenInLS = (serverToken) => {

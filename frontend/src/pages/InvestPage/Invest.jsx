@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './Invest.css';
 import { Navbar } from '../../components/NavbarComponent/Navbar';
 import Header from '../../components/Header/Header';
