@@ -1,9 +1,14 @@
+require('dotenv').config();
+
+const FRONTEND_URL = process.env.FRONTEND_URL;
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const authMiddleware = require('../middlewares/auth-middleware')
 const authController = require('../controllers/auth-controller');
+
 const User = require('../models/user-model')
+
 
 router.route("/").get(authController.home);
 router.route("/register").post(authController.register);
@@ -31,7 +36,7 @@ router.get(
       if (existingUser) {
         // If the user exists, generate token and log them in
         const token = await existingUser.generateToken();
-        return res.redirect(`http://localhost:3000/oauth-success?token=${token}`);
+        return res.redirect(`${FRONTEND_URL}/oauth-success?token=${token}`);
       } else {
         // If the user doesn't exist, create a new user
         const newUser = new User({
@@ -44,7 +49,7 @@ router.get(
 
         // Generate token for the newly registered user
         const token = await newUser.generateToken();
-        return res.redirect(`http://localhost:3000/oauth-success?token=${token}`);
+        return res.redirect(`${FRONTEND_URL}/oauth-success?token=${token}`);
       }
     } catch (err) {
       console.error(err);

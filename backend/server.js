@@ -1,18 +1,18 @@
 require('dotenv').config();
+const FRONTEND_URL = process.env.FRONTEND_URL;
+
 const express = require('express');
 const session = require('express-session');
 const cors = require("cors");
 const passport = require('passport');
 require('./utils/passport');
 
-
-
 const app = express();
 const router = require('./router/auth-router');
 const messageRouter = require('./router/message-router')
 const connectDb = require('./utils/db');
 const corsOptions = {
-  origin: ["https://cleanclicklandingpage-4ort-3hqh7tkli-atharva-chavans-projects.vercel.app"],
+  origin: [`${FRONTEND_URL}`],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
